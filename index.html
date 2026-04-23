@@ -26,382 +26,44 @@
     </div>
   </header>
 
-  <main class="container">
-    <!-- Items Section -->
+  <main class="dashboard">
+
+  <!-- LEFT COLUMN -->
+  <div class="main-content">
+
     <section class="card" id="itemsSection">
       <h2>Items</h2>
-      <table class="calc-table">
-        <thead>
-          <tr>
-            <th>Qty</th>
-            <th>Item</th>
-            <th>Cost</th>
-            <th>Line Total</th>
-            <th>Comments</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="100" inputmode="numeric" pattern="\d*"></td>
-            <td>Respray</td>
-            <td class="price" data-price="500">$500</td>
-            <td class="line-total">$0</td>
-            <td class="comment"></td>
-          </tr>
-
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="500" inputmode="numeric" pattern="\d*"></td>
-            <td>Cosmetics</td>
-            <td class="price" data-price="500">$500</td>
-            <td class="line-total">$0</td>
-            <td class="comment"></td>
-          </tr>
-
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="500" inputmode="numeric" pattern="\d*"></td>
-            <td>Wheels</td>
-            <td class="price" data-price="500">$500</td>
-            <td class="line-total">$0</td>
-            <td class="comment"></td>
-          </tr>
-
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="500" inputmode="numeric" pattern="\d*"></td>
-            <td>Lights</td>
-            <td class="price" data-price="500">$500</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted">Neons</td>
-          </tr>
-
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="500" inputmode="numeric" pattern="\d*"></td>
-            <td>Stancer</td>
-            <td class="price" data-price="500">$500</td>
-            <td class="line-total">$0</td>
-            <td class="comment"></td>
-          </tr>
-
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="500" inputmode="numeric" pattern="\d*"></td>
-            <td>Extras</td>
-            <td class="price" data-price="500">$500</td>
-            <td class="line-total">$0</td>
-            <td class="comment"></td>
-          </tr>
-
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="100" inputmode="numeric" pattern="\d*"></td>
-            <td>Cleaning kits</td>
-            <td class="price" data-price="100">$100</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="100" inputmode="numeric" pattern="\d*"></td>
-            <td>Tire Replacement</td>
-            <td class="price" data-price="100">$100</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted">Per tyre</td>
-          </tr>
-
-          <tr data-section="items">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="250" inputmode="numeric" pattern="\d*"></td>
-            <td>Duct Tape</td>
-            <td class="price" data-price="250">$250</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3" class="section-label">Items Total</td>
-            <td id="itemsTotal" class="section-total">$0</td>
-            <td></td>
-          </tr>
-        </tfoot>
-      </table>
+      <!-- KEEP YOUR TABLE EXACTLY AS IS -->
     </section>
 
-    <!-- Material Calculator (hidden by default) -->
-    <section class="card material-card hidden" id="materialCard">
-      <h2>Material Calculator</h2>
-      <table class="calc-table" id="materialTable">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Amount</th>
-            <th>Cost (unit)</th>
-            <th>Cost of Items</th>
-            <th>Comments</th>
-          </tr>
-        </thead>
-        <tbody><tr>
-        <td class="mat-item">Steel</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$65</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Metal Scrap</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$70</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Iron</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$45</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Aluminum</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$30</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Rubber</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$15</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Plastic</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$15</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Glass</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$15</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Copper</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$25</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Wood</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$25</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr><tr>
-        <td class="mat-item">Slips</td>
-        <td><input class="mat-amount" type="number" min="0" value="0"></td>
-        <td class="mat-cost">$180</td>
-        <td class="mat-line">$0</td>
-        <td class="mat-comment">Buying Everything</td>
-      </tr></tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3" class="section-label">Materials Total</td>
-            <td id="materialsTotal" class="section-total">$0</td>
-            <td></td>
-          </tr>
-        </tfoot>
-      </table>
-
-      <!-- Discounts removed for Material Calculator (totals shown below) -->
-    </section>
-
-    <!-- Upgrades Section -->
     <section class="card" id="upgradesSection">
       <h2>Upgrades</h2>
-      <table class="calc-table">
-        <thead>
-          <tr>
-            <th>Qty</th>
-            <th>Item</th>
-            <th>Cost</th>
-            <th>Line Total</th>
-            <th>Comments</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr data-section="upgrades">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="25000" inputmode="numeric" pattern="\d*"></td>
-            <td>Full With sus</td>
-            <td class="price" data-price="25000">$25,000</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted">5 Parts</td>
-          </tr>
-
-          <tr data-section="upgrades">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="20000" inputmode="numeric" pattern="\d*"></td>
-            <td>Full w/o sus</td>
-            <td class="price" data-price="20000">$20,000</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted">4 Parts</td>
-          </tr>
-
-          <tr data-section="upgrades">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="5000" inputmode="numeric" pattern="\d*"></td>
-            <td>Performance Part</td>
-            <td class="price" data-price="5000">$5,000</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted">1–3 parts max</td>
-          </tr>
-
-          <tr data-section="upgrades">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="5000" inputmode="numeric" pattern="\d*"></td>
-            <td>Tuning</td>
-            <td class="price" data-price="5000">$5,000</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-
-          <tr data-section="upgrades">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="15000" inputmode="numeric" pattern="\d*"></td>
-            <td>Engine swaps</td>
-            <td class="price" data-price="15000">$15,000</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-
-          <tr data-section="upgrades">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="1000" inputmode="numeric" pattern="\d*"></td>
-            <td>Remove Tune</td>
-            <td class="price" data-price="1000">$1,000</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3" class="section-label">Upgrades Total</td>
-            <td id="upgradesTotal" class="section-total">$0</td>
-            <td></td>
-          </tr>
-        </tfoot>
-      </table>
     </section>
 
-    <!-- Repair Section -->
     <section class="card" id="repairSection">
       <h2>Repair</h2>
-      <table class="calc-table">
-        <thead>
-          <tr>
-            <th>Qty</th>
-            <th>Item</th>
-            <th>Cost</th>
-            <th>Line Total</th>
-            <th>Comments</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr data-section="repair">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="500" inputmode="numeric" pattern="\d*"></td>
-            <td>Basic</td>
-            <td class="price" data-price="1500">$1500</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-
-          <tr data-section="repair">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="1500" inputmode="numeric" pattern="\d*"></td>
-            <td>Full with Basic</td>
-            <td class="price" data-price="3000">$3,000</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-
-          <tr data-section="repair">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="1000" inputmode="numeric" pattern="\d*"></td>
-            <td>Full just intern</td>
-            <td class="price" data-price="2500">$2,500</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted">Has free car cleaning kit used</td>
-          </tr>
-
-          <!-- <tr data-section="repair">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="150" /></td>
-            <td>Per intun part</td>
-            <td class="price" data-price="150">$150</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted">Price per internal part</td>
-          </tr> -->
-
-          <tr data-section="repair">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="500" inputmode="numeric" pattern="\d*"></td>
-            <td>Tow in city</td>
-            <td class="price" data-price="1500">$1,500</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-
-          <tr data-section="repair">
-            <td><input class="qty" type="number" min="0" step="1" value="0" data-price="1500" inputmode="numeric" pattern="\d*"></td>
-            <td>Tow out city</td>
-            <td class="price" data-price="2500">$2,500</td>
-            <td class="line-total">$0</td>
-            <td class="comment muted"></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3" class="section-label">Repair Total</td>
-            <td id="repairTotal" class="section-total">$0</td>
-            <td></td>
-          </tr>
-        </tfoot>
-      </table>
     </section>
 
-    <!-- Totals / Discounts -->
-    
-    <aside class="card totals-card">
-      <h2>Totals</h2>
+    <section class="card hidden" id="materialCard">
+      <h2>Material Calculator</h2>
+    </section>
 
-      <div class="totals-row">
-        <div>Items</div><div id="itemsTotalAside" class="totals-value">$0</div>
-      </div>
-      <div class="totals-row">
-        <div>Upgrades</div><div id="upgradesTotalAside" class="totals-value">$0</div>
-      </div>
-      <div class="totals-row">
-        <div>Repair</div><div id="repairTotalAside" class="totals-value">$0</div>
-      </div>
+  </div>
 
-      <hr>
+  <!-- RIGHT SIDEBAR -->
+  <aside class="sidebar">
 
-      <div class="grand-row">
-        <div>Grand Total</div>
-        <div id="grandTotal" class="grand-value">$0</div>
-      </div>
-
-      <div class="discounts">
-        <div class="discount-row"><div>10% <small class="muted">(PD &amp; EMS get this automatically)</small></div><div id="d10" class="discount-value">$0</div></div>
-        <div class="discount-row"><div>15%</div><div id="d15" class="discount-value">$0</div></div>
-        <div class="discount-row"><div>25%</div><div id="d25" class="discount-value">$0</div></div>
-        <div class="discount-row"><div>50%</div><div id="d50" class="discount-value">$0</div></div>
-      </div>
-      
-      <!-- Host-only comments: edit the content below directly in index.html (no web UI) -->
-      <div class="host-comments">
-        <h3>Management Announcement</h3>
-        <!-- Edit this inner HTML in index.html to change the host-only comment shown on the site. -->
-        <div id="hostComments">
-          <p>Welcome to Hayes new work calculator, here it should make it a little bit easier to work on things, without the struggles of a sheet with everyone in there.</p>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Picture of the Week: placed under Upgrades & Repair (spans columns 2-3) -->
-    <div class="card picture-of-week">
-      <h3>Picture of the Week</h3>
-      <div class="pow-frame">
-        <img id="powImage" src="https://i.ibb.co/BVW2CttV/image.png" alt="Picture coming soon...">
-      </div>
-        <!-- To update: edit the <img src="..."> value in this file, or replace the file at the path above. -->
-        <div class="pow-credit">Photo by: 📷 <span id="powPhotographer">Place Holder.</span></div>
+    <div class="card totals-card">
+      <!-- KEEP YOUR TOTALS HTML -->
     </div>
-  </main>
+
+    <div class="card picture-of-week">
+      <!-- KEEP YOUR IMAGE -->
+    </div>
+
+  </aside>
+
+</main>
 
   <script src="script.js"></script>
 
