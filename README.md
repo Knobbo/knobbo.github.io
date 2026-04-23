@@ -1,4 +1,4 @@
-# Hayes Mechanic Service Calculator - Modernized
+# Big Juju's Mechanic Service Calculator - Modernized
 
 ## 🚀 Modern Features Added
 - **Glassmorphism & Gradients**: Ultra-modern dark theme with backdrop blur.
