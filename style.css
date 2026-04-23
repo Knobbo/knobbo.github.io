@@ -133,3 +133,20 @@ button:hover {
 .muted {
   color: #94a3b8;
 }
+
+section.card {
+  margin-bottom: 24px;
+}
+
+h2 {
+  margin-bottom: 12px;
+}
+
+input {
+  width: 60px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: white;
+}
