@@ -1,70 +1,145 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Hayes Mechanic — Service Calculator</title>
   <link rel="stylesheet" href="styles.css">
-<style type="text/css" id="operaUserStyle"></style><style type="text/css"></style></head>
+</head>
+
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo">🔧</div>
-      <div class="brand-text">
-        <h1 class="brand-title">HAYES MECHANIC — <span class="brand-sub">Service Calculator</span></h1>
-      </div>
-    </div>
 
-    <!-- Controls + Tabs -->
-    <div class="controls">
-      <div class="tabs">
-        <button id="tabService" class="btn small active">Service Calculator</button>
-        <button id="tabMaterial" class="btn small">Material Calculator</button>
-      </div>
+<header class="site-header">
+  <h1>🔧 Hayes Mechanic — Service Calculator</h1>
 
-      <div class="actions">
-        <button id="resetBtn" class="btn">Reset</button>
-      </div>
-    </div>
-  </header>
+  <div class="tabs">
+    <button id="tabService" class="btn active">Service</button>
+    <button id="tabMaterial" class="btn">Materials</button>
+    <button id="resetBtn" class="btn">Reset</button>
+  </div>
+</header>
 
-  <main class="dashboard">
+<main class="dashboard">
 
-  <!-- LEFT COLUMN -->
+  <!-- LEFT -->
   <div class="main-content">
 
+    <!-- ITEMS -->
     <section class="card" id="itemsSection">
       <h2>Items</h2>
-      <!-- KEEP YOUR TABLE EXACTLY AS IS -->
+      <table class="calc-table">
+        <thead>
+          <tr>
+            <th>Qty</th>
+            <th>Item</th>
+            <th>Cost</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-section="items">
+            <td><input class="qty" type="number" value="0" data-price="500"></td>
+            <td>Respray</td>
+            <td class="price" data-price="500">$500</td>
+            <td class="line-total">$0</td>
+          </tr>
+          <tr data-section="items">
+            <td><input class="qty" type="number" value="0" data-price="500"></td>
+            <td>Cosmetics</td>
+            <td class="price" data-price="500">$500</td>
+            <td class="line-total">$0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="section-total">Total: <span id="itemsTotal">$0</span></div>
     </section>
 
+    <!-- UPGRADES -->
     <section class="card" id="upgradesSection">
       <h2>Upgrades</h2>
+      <table class="calc-table">
+        <tbody>
+          <tr data-section="upgrades">
+            <td><input class="qty" type="number" value="0" data-price="25000"></td>
+            <td>Full Upgrade</td>
+            <td class="price" data-price="25000">$25,000</td>
+            <td class="line-total">$0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>Total: <span id="upgradesTotal">$0</span></div>
     </section>
 
+    <!-- REPAIR -->
     <section class="card" id="repairSection">
       <h2>Repair</h2>
+      <table class="calc-table">
+        <tbody>
+          <tr data-section="repair">
+            <td><input class="qty" type="number" value="0" data-price="1500"></td>
+            <td>Basic Repair</td>
+            <td class="price" data-price="1500">$1,500</td>
+            <td class="line-total">$0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>Total: <span id="repairTotal">$0</span></div>
     </section>
 
+    <!-- MATERIAL -->
     <section class="card hidden" id="materialCard">
-      <h2>Material Calculator</h2>
+      <h2>Materials</h2>
+      <table class="calc-table" id="materialTable">
+        <tbody>
+          <tr>
+            <td>Steel</td>
+            <td><input class="mat-amount" type="number" value="0"></td>
+            <td class="mat-cost">$65</td>
+            <td class="mat-line">$0</td>
+          </tr>
+          <tr>
+            <td>Plastic</td>
+            <td><input class="mat-amount" type="number" value="0"></td>
+            <td class="mat-cost">$15</td>
+            <td class="mat-line">$0</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>Total: <span id="materialsTotal">$0</span></div>
     </section>
 
   </div>
 
-  <!-- RIGHT SIDEBAR -->
+  <!-- RIGHT -->
   <aside class="sidebar">
 
     <div class="card totals-card">
-      <!-- KEEP YOUR TOTALS HTML -->
+      <h2>Totals</h2>
+
+      <div>Items: <span id="itemsTotalAside">$0</span></div>
+      <div>Upgrades: <span id="upgradesTotalAside">$0</span></div>
+      <div>Repair: <span id="repairTotalAside">$0</span></div>
+
+      <hr>
+
+      <div class="grand">Grand Total: <span id="grandTotal">$0</span></div>
+
+      <div>10%: <span id="d10">$0</span></div>
+      <div>15%: <span id="d15">$0</span></div>
+      <div>25%: <span id="d25">$0</span></div>
+      <div>50%: <span id="d50">$0</span></div>
     </div>
 
-    <div class="card picture-of-week">
-      <!-- KEEP YOUR IMAGE -->
+    <div class="card">
+      <h3>Picture of the Week</h3>
+      <img src="https://i.ibb.co/BVW2CttV/image.png" style="width:100%; border-radius:10px;">
     </div>
 
   </aside>
 
 </main>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
-</body></html>
+</body>
+</html>
