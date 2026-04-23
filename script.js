@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const grand = items + upgrades + repair;
     $('#grandTotal').textContent = formatCurrency(grand);
 
-    // discounts
-    $('#d10').textContent = formatCurrency(grand * 0.10);
-    $('#d15').textContent = formatCurrency(grand * 0.15);
-    $('#d25').textContent = formatCurrency(grand * 0.25);
-    $('#d50').textContent = formatCurrency(grand * 0.50);
+    // Discounts: Grand Total after percentage discount applied
+    $('#d10').textContent = formatCurrency(grand * 0.9);   // 10% off
+    $('#d15').textContent = formatCurrency(grand * 0.85);  // 15% off
+    $('#d25').textContent = formatCurrency(grand * 0.75);  // 25% off
+    $('#d50').textContent = formatCurrency(grand * 0.5);   // 50% off
   }
 
   // ---------------- MATERIAL CALCULATOR ----------------
